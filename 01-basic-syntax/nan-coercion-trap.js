@@ -77,19 +77,21 @@ Start coding below
 ==========================================
 */
 
-let priceInput = "100px";
-let quantity = "12";
+let price = "100asd";
+let qty = "12";
 
 /* Your logic here */
 
-let numericPrice = Number(priceInput);
-let numericQuantity = Number(quantity);
+let isValidStr = price.trim() !== "" && qty.trim() !== "";
 
-let totalPrice = numericPrice * numericQuantity;
-let isValidPrice = !Number.isNaN(totalPrice);
+let nPrice = Number(price);
+let nQty = Number(qty);
 
-totalPrice = isValidPrice ? totalPrice : 0;
+let isValidNum = isValidStr && !Number.isNaN(nPrice) && !Number.isNaN(nQty);
+
+let totalPrice = nPrice * nQty;
+let isValidPrice = isValidNum ? totalPrice : 0 ;
 
 /* Output your results here */
 
-console.log(`Total price: ${totalPrice}`);
+console.log(`Total price: ${isValidPrice}`);
