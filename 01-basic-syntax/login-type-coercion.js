@@ -50,6 +50,7 @@ Otherwise → display "Account Inactive"
 
 isActive is currently a STRING, not a boolean.
 
+
 ------------------------------------------
 
 Type Coercion Experiment
@@ -103,7 +104,7 @@ let isLoginSuccess =
 
 // Account status check
 let accountStatus =
-  isActive === true ? "Account Active" : "Account Inactive";
+  isActive ? "Account Active" : "Account Inactive";
 
 // Final output
 console.log(`Login Success: ${isLoginSuccess}
