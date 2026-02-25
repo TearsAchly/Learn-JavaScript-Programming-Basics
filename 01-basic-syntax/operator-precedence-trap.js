@@ -98,7 +98,11 @@ let isBlacklisted = false;
 
 /* Improved version (clear grouping) */
 
-let canEnter = (age > 18) && hasTicket && (!isBlacklisted);
+let isAgeValid = age > 18;
+let isHasTicket = hasTicket;
+let isNotBlacklisted = !isBlacklisted;
+
+let canEnter = isAgeValid && isHasTicket && isNotBlacklisted;
 
 /* Output */
 
