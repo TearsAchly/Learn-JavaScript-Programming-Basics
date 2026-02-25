@@ -89,32 +89,31 @@ Start coding below
 */
 
 
-let itemName = "JavaScript Book";
+let item = "JavaScript Book";
 // string
 
 let price = "50000";
 // string
 
-let quantity = 3;
+let qty = 3;
 // number
 
-let member = true;
+let isMember = true;
 // boolean
 
 let priceNumber = Number(price);
 // number
 
-let totalBeforeDiscount = priceNumber * quantity;
+let subtotal = priceNumber * qty;
 
-let discount = member ? (10 / 100 * totalBeforeDiscount) : 0;
+let disc = isMember ? (10 / 100 * subtotal) : 0;
 
-let totalAfterDiscount = totalBeforeDiscount - discount;
+let Total = subtotal - disc;
 
 console.log(
-`Item Name: ${itemName}
+`Item Name: ${item}
 Price: ${priceNumber}
-Quantity: ${quantity}
-Member Status: ${member}
-Total Before Discount: ${totalBeforeDiscount}
-Total After Discount: ${totalAfterDiscount}`
-);
+Qtr: ${qty}
+Member: ${isMember}
+Subtotal: ${subtotal}
+Total: ${Total}`);
