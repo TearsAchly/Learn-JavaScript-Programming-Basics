@@ -101,27 +101,26 @@ Start coding below
 */
 
 let username = "TearsAchly";
-let subscription = "";
+let isSubscription = "true";
 let loginAttempts = 3;
-let isVerified = "false"; // string, not boolean
-let balance = null;
+let isVerified = "true"; // string, not boolean
+let balance = 1000;
 
-/* Fix the data properly */
-subscription = true;
-loginAttempts = 2;
-isVerified = "true";
-balance = 1000;
-
-/* Premium access logic */
-let canAccessPremium =
-  username !== "" &&
-  subscription &&
+let isDataValid =
+  username.trim() !== "" &&
   loginAttempts < 3 &&
-  isVerified === "true" &&
   balance !== null;
 
+let isPremiumValid =
+  isSubscription.trim() !== "false" &&
+  isSubscription.trim() !== "" &&
+  isVerified.trim() !== "false" &&
+  isVerified.trim() !== "";
+
+let canAccessPremium = isDataValid && isPremiumValid;
+
 console.log(`Username: ${username}
-Subscription: ${subscription}
+Subscription: ${isSubscription}
 Login Attempts: ${loginAttempts}
 Verified: ${isVerified}
 Balance: ${balance}
