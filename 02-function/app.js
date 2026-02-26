@@ -1,5 +1,9 @@
-function greetings () {
-  console.log(`hello, world`);
+const numbersSum = function (firstNumInt , secondNumInt) {
+  
+  let result = firstNumInt + secondNumInt; 
+  return result;
+
 }
 
-greetings()
+console.log(numbersSum(10,20));
+
