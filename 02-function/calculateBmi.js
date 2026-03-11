@@ -58,7 +58,7 @@ Create a Function – isActiveUser
 */
 
 const name = "TearsAchly";
-const weight = 100;
+const weight = 40;
 const height = 1.75;
 const workoutDays = 4;
 
@@ -72,11 +72,11 @@ console.log(calcBmi);
 
 const bmiCategory = function (valueCalcBmi) {
   let result =
-    valueCalcBmi <= 18.5
+    valueCalcBmi < 18.5
       ? "Underweight"
-      : valueCalcBmi <= 24.9
+      : valueCalcBmi < 24.9
         ? "Normal"
-        : valueCalcBmi <= 29.9
+        : valueCalcBmi < 29.9
           ? "Overweight"
           : valueCalcBmi >= 30
             ? "Obese"
